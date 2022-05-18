@@ -17,7 +17,7 @@ const BoxColor = (props) => {
     height: 120,
     width: 400,
     border: '2px dotted black',
-    marginBottom: '5px',
+    margin: '10px',
     // color: 'green',
   };
 

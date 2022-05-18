@@ -25,8 +25,8 @@ const Greetings = (props) => {
       style={{
         height: 50,
         width: 400,
-        border: '2px solid green',
-        marginBottom: '5px',
+        border: '2px solid orange',
+        margin: '10px',
       }}
     >
       <p>

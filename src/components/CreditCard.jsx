@@ -30,7 +30,7 @@ const CreditCard = (props) => {
       className="creditCard"
       style={{
         padding: 5,
-        marginBottom: 5,
+        margin: 10,
         borderRadius: '7%',
         height: 140,
         width: 270,

@@ -11,7 +11,7 @@ const Random = (props) => {
         width: 300,
         border: '2px solid blue',
         paddingTop: '5px',
-        marginBottom: '5px',
+        margin: '10px',
       }}
     >
       Random value between {props.min} and {props.max} :{' '}

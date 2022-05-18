@@ -8,10 +8,11 @@ const IdCard = (props) => {
       className="idCard"
       style={{
         height: 325,
-        width: 800,
-        border: '2px solid orange',
-        marginBottom: '10px',
+        width: 700,
+        border: '2px solid green',
+        margin: '10px',
         paddingTop: '15px',
+        backgroundColor: 'lightgreen',
       }}
     >
       <img src={picture} alt={lastName} />
