@@ -1,6 +1,7 @@
 import React from 'react'; // ITERATION 5
 import Visa from './../assets/images/visa.png';
 import MasterCard from './../assets/images/master-card.svg';
+import './../style/creditCard.css';
 
 const CreditCard = (props) => {
   //let logoCard = '';
@@ -22,23 +23,26 @@ const CreditCard = (props) => {
 
   let cardNumber = `${'•••• •••• •••• '}` + number.slice(-4);
 
-  // expirationMonth.length < 2 ? `${'0'}` + expirationMonth
-  // : expirationMonth;
+  let month = expirationMonth;
+  if (month <= 9) month = '0' + month;
 
   return (
     <div
-      className="creditCard"
+      className="credit-card-box"
       style={{
-        padding: 5,
-        margin: 10,
-        borderRadius: '7%',
-        height: 140,
         width: 270,
+        borderRadius: '7%',
+        padding: 5,
+
+        margin: 10,
+        height: 140,
+
         backgroundColor: bgColor,
         color: color,
       }}
     >
       <img
+        className="credit-card-img"
         style={{
           height: 20,
           width: 60,
@@ -46,15 +50,20 @@ const CreditCard = (props) => {
         src={imgSrc}
         alt={type}
       />
-      <p>
-        {' '}
-        <strong>{cardNumber}</strong>{' '}
-      </p>
 
-      <p>
-        Expires {expirationMonth}/{expirationYear} {bank}
-      </p>
-      <p>{owner}</p>
+      <div className="credit-card-nb">
+        <p>{cardNumber}</p>
+      </div>
+
+      <div className="credit-card-details">
+        <div className="credit-card-date-bank">
+          <p>
+            Expires {month}/{expirationYear} {bank}
+          </p>
+          {/* <p>{bank}</p> */}
+        </div>
+        <p>{owner}</p>
+      </div>
     </div>
   );
 };
